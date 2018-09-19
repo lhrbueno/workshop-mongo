@@ -50,6 +50,10 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+# STS
+.factorypath
+.sts4-cache
+
 
 # OS
 .DS_Store
