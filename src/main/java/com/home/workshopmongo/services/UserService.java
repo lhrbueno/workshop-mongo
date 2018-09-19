@@ -12,4 +12,6 @@ public interface UserService {
 
 	List<User> findAll() throws UserNotFoundException;
 	
+	User findById(String id) throws UserNotFoundException;
+	
 }
