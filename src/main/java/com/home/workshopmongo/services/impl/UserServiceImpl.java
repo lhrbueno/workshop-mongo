@@ -8,11 +8,11 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.home.workshopmongo.MessageProperties;
 import com.home.workshopmongo.domain.User;
 import com.home.workshopmongo.exceptions.UserNotFoundException;
 import com.home.workshopmongo.repository.UserRepository;
 import com.home.workshopmongo.services.UserService;
+import com.home.workshopmongo.utils.MessageProperties;
 
 @Service
 public class UserServiceImpl implements UserService {

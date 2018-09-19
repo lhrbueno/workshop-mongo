@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.home.workshopmongo.MessageProperties;
 import com.home.workshopmongo.domain.User;
 import com.home.workshopmongo.dto.UserDTO;
 import com.home.workshopmongo.exceptions.UserNotFoundException;
 import com.home.workshopmongo.services.UserService;
+import com.home.workshopmongo.utils.MessageProperties;
 
 @RestController
 @RequestMapping("/users")
