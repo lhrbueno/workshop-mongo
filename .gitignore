@@ -8,6 +8,9 @@ tomcat
 # Default excludes
 #
 
+# Logs
+
+*/log/*
 *.log
 
 # Binaries
