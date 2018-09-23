@@ -10,8 +10,14 @@ import com.home.workshopmongo.exceptions.UserNotFoundException;
 @Component
 public interface UserService {
 
-	List<User> findAll() throws UserNotFoundException;
+	List<User> findAll();
 	
 	User findById(String id) throws UserNotFoundException;
+	
+	User insert(User user);
+	
+	void delete(String id);
+	
+	User update(User user) throws UserNotFoundException;
 	
 }
