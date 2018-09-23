@@ -1,4 +1,4 @@
-package com.home.workshopmongo.resources.exceptions;
+package com.home.workshopmongo.resources.exception;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.home.workshopmongo.exceptions.UserNotFoundException;
 import com.home.workshopmongo.utils.MessageProperties;
+import com.home.workshopmongo.utils.MessageResponse;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
