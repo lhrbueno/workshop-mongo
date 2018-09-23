@@ -26,7 +26,7 @@ public class PopulateDatabase implements CommandLineRunner {
 		LOGGER.info("Deleted users collection from database");
 		
 		User madara = new User(null, "Uchiha Madara", "madara@uchiha.konoha.co.jp");
-		User hashirama = new User(null, "Alex Green", "hashirama@senjuu.konoha.co.jp");
+		User hashirama = new User(null, "Senjuu Hashirama", "hashirama@senjuu.konoha.co.jp");
 		User d = new User(null, "D.", "d@d.co.jp");
 		
 		LOGGER.info("Populating users collection with: 'Madara', 'Hashirama' and 'D.'");
