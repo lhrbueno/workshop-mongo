@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.home.workshopmongo.domain.User;
-import com.home.workshopmongo.exceptions.UserNotFoundException;
+import com.home.workshopmongo.exceptions.NotFoundException;
 import com.home.workshopmongo.repository.UserRepository;
 import com.home.workshopmongo.services.UserService;
 import com.home.workshopmongo.utils.MessageProperties;
@@ -27,9 +27,9 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public User findById(String id) throws UserNotFoundException {
+	public User findById(String id) throws NotFoundException {
 		Optional<User> user = userRepository.findById(id);
-		return user.orElseThrow(() -> new UserNotFoundException(messageProperties.getMessage("user.error.notFound")));
+		return user.orElseThrow(() -> new NotFoundException(messageProperties.getMessage("user.error.notFound")));
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public User update(User user) throws UserNotFoundException {
+	public User update(User user) throws NotFoundException {
 		User userRequest = findById(user.getId());
 		userRequest.setName(user.getName());
 		userRequest.setEmail(user.getEmail());
