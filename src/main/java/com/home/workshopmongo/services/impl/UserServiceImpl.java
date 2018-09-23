@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public User findById(String id) throws NotFoundException {
+	public User findById(String id) {
 		Optional<User> user = userRepository.findById(id);
 		return user.orElseThrow(() -> new NotFoundException(messageProperties.getMessage("user.error.notFound")));
 	}
@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public User update(User user) throws NotFoundException {
+	public User update(User user) {
 		User userRequest = findById(user.getId());
 		userRequest.setName(user.getName());
 		userRequest.setEmail(user.getEmail());
