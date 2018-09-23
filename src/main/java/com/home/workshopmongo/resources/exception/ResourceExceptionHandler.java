@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.home.workshopmongo.exceptions.UserNotFoundException;
+import com.home.workshopmongo.exceptions.NotFoundException;
 import com.home.workshopmongo.utils.MessageProperties;
 import com.home.workshopmongo.utils.MessageResponse;
 
@@ -20,8 +20,8 @@ public class ResourceExceptionHandler {
 	@Autowired
 	private MessageProperties messageProperties;
 
-	@ExceptionHandler(UserNotFoundException.class)
-	public ResponseEntity<MessageResponse> userNotFound(UserNotFoundException e) {
+	@ExceptionHandler(NotFoundException.class)
+	public ResponseEntity<MessageResponse> notFound(NotFoundException e) {
 		LOGGER.info(e.getMessage());
 		HttpStatus status = HttpStatus.NOT_FOUND;
 		MessageResponse mr = new MessageResponse(status.value(), e.getMessage());
