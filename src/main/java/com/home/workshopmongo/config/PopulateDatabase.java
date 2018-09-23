@@ -50,7 +50,7 @@ public class PopulateDatabase implements CommandLineRunner {
 	
 	private final String YASSAN_COMMENT_1 = "But, this wind... is ever so softly weepíng.";
 	
-	private final String HIDENORI_COMMENT_2 = "Those are't tears of sadness. They're tears of happiness, right?"; 
+	private final String HIDENORI_COMMENT_2 = "Those aren't tears of sadness. They're tears of happiness, right?"; 
 	
 	private final String HIDENORI_COMMENT_3 = "Let us make haste... lest the wind ceases.";
 	
