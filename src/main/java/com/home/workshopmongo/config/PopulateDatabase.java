@@ -102,6 +102,11 @@ public class PopulateDatabase implements CommandLineRunner {
 		LOGGER.info("Populating posts collection with: 'The end of war' and 'The end of highschool years'");
 		postRepository.saveAll(Arrays.asList(endOfWar, endOfHighSchool));
 		
+		hashirama.setPosts(Arrays.asList(endOfWar));
+		yassan.setPosts(Arrays.asList(endOfHighSchool));
+		
+		userRepository.saveAll(Arrays.asList(hashirama, yassan));
+		
 	}
 	
 	public static List<Comment> createComment(Comment... comments) {
