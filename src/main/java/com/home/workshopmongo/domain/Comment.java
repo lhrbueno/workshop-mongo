@@ -1,14 +1,19 @@
 package com.home.workshopmongo.domain;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Comment {
+public class Comment implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private String author;
 	
 	private String comment;
 	
 	private LocalDateTime instant;
+	
+	public Comment() {}
 
 	public Comment(String author, String comment, LocalDateTime instant) {
 		this.author = author;
