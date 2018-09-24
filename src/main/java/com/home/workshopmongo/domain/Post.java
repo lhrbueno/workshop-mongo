@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,6 +18,7 @@ public class Post implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
 	private String id;
 	
 	private String title;
@@ -33,6 +35,8 @@ public class Post implements Serializable {
 	private AuthorDTO author;
 	
 	private List<Comment> comments = new ArrayList<>();
+	
+	public Post() {}
 
 	public Post(String id, String title, String body, LocalDateTime instant, User user) {
 		this.id = id;
